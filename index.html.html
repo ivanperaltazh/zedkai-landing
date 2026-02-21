@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEDKAI - Premium brand </title>
+    <meta name="description" content="Adquiera ZEDKAI: Un dominio .com premium de 6 letras con protección de marca en la UE. Perfecto para IA, SaaS y empresas tecnológicas.">
+    <meta name="keywords" content="dominio premium, marca IA, marca registrada incluida, branding SaaS, startup tecnológica, zedkai.com, marca UE, adquisición de marca">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='goldGrad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23F4E4C1;stop-opacity:1' /><stop offset='50%' style='stop-color:%23D4AF37;stop-opacity:1' /><stop offset='100%' style='stop-color:%23B8942B;stop-opacity:1' /></linearGradient></defs><circle cx='16' cy='16' r='16' fill='%231a1a1a'/><path d='M9 10h14l-9 12h9' stroke='url(%23goldGrad)' stroke-width='2.5' fill='none' stroke-linecap='butt' stroke-linejoin='miter'/><path d='M9 10h4M19 22h4' stroke='%23F4E4C1' stroke-width='2.5' stroke-linecap='butt'/></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --gold-primary: #D4AF37;
+            --gold-light: #F4E4C1;
+            --gold-dark: #B8942B;
+            --charcoal: #1a1a1a;
+            --charcoal-light: #2a2a2a;
+            --charcoal-lighter: #3a3a3a;
+            --white: #ffffff;
+            --grey: #666666;
+            --shadow-gold: 0 8px 32px rgba(212, 175, 55, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--charcoal);
+            color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Selector de Idioma */
+        .lang-selector {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            z-index: 100;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .lang-btn {
+            color: var(--gold-light);
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 5px;
+            transition: all 0.3s ease;
+            opacity: 0.6;
+        }
+
+        .lang-btn.active {
+            opacity: 1;
+            border-bottom: 1px solid var(--gold-primary);
+        }
+
+        .lang-btn:hover {
+            opacity: 1;
+        }
+
+        /* Luxury Background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(212, 175, 55, 0.06) 0%, transparent 50%),
+                linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
+            z-index: -1;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            align-items: center;
+            text-align: center;
+            position: relative;
+            min-height: auto;
+            padding-top: 0.5rem !important;
+            padding-bottom: 4rem;  
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+            opacity: 0.3;
+        }
+
+        .logo-mark {
+           font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(4rem, 12vw, 9rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            animation: fadeInScale 1.2s ease-out;
+            text-shadow: 0 0 60px rgba(232, 198, 89, 0.3),
+             0 0 7px rgba(187, 148, 22, 0.35),
+            0 0 10px rgba(212, 175, 55, 0.2);
+            margin-top: 2rem !important;
+            line-height: 1;     
+        }
+
+        .hero-icons-row {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: -0.5rem;
+            margin-bottom: 4.5rem;
+            animation: fadeInUp 1.2s ease-out 0.4s backwards;
+        }
+
+        .hero-icon-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .hero-icon-i {
+            color: #ffffff;
+            width: 52px;
+            height: 52px;
+            opacity: 0.9;
+            stroke-width: 0.6;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero-icon-i:hover  {
+            color: var(--gold-light);
+            stroke-width: 0.9;
+            opacity: 1;
+            filter: drop-shadow(0 0 10px rgba(244, 228, 193, 0.4));
+        }
+
+        .hero-icon-tooltip {
+            position: absolute;
+            bottom: -35px;
+            color: var(--gold-light);
+            font-size: 0.75rem;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .hero-icon-wrapper:hover .hero-icon-tooltip {
+            opacity: 1;
+            visibility: visible;
+            bottom: -30px;
+        }
+
+        .tagline {
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            color: var(--gold-light);
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1.2s ease-out 0.3s backwards;
+        }
+
+        .hero-description {
+            max-width: 800px;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            line-height: 1.8;
+            color: #cccccc;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1.2s ease-out 0.6s backwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: all 0.4s ease;
+            box-shadow: var(--shadow-gold);
+            animation: fadeInUp 1.2s ease-out 0.9s backwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 48px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 3rem 2rem;
+            background: var(--charcoal-light);
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3.5rem, 6vw, 4rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--gold-light);
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 400;
+        }
+
+        /* Value Props Section */
+        .value-props {
+            padding: 3rem 2rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            text-align: center;
+            color: var(--gold-primary);
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            margin-bottom: 2rem;
+        }
+
+        .props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .prop-card {
+            background: linear-gradient(135deg, var(--charcoal-light), var(--charcoal-lighter));
+            padding: 2.5rem;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-gold);
+            border-color: var(--gold-primary);
+        }
+
+        .prop-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold-primary), var(--gold-dark));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .prop-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .prop-icon {
+            width: 40px;
+            height: 40px;
+            color: var(--gold-primary);
+            stroke-width: 1.5;
+            padding-right: 0.5rem;
+        }
+
+        .prop-title {
+            display: flex;
+            align-items: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .prop-text {
+            color: #cccccc;
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        /* Assets Section */
+        .assets-section {
+            padding: 3rem 2rem;
+            background: var(--charcoal-light);
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .asset-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .asset-item {
+            background: var(--charcoal);
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid var(--gold-primary);
+            text-align: center;
+            transform: scale(1.03);
+        }
+
+        .asset-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 1rem;
+            display: block;
+            color: var(--gold-primary);
+            stroke-width: 1.5;
+        }
+
+        .asset-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--gold-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        /* Legal Section */
+        .legal-section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .legal-highlight {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(212, 175, 55, 0.05));
+            padding: 2rem;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            margin-top: 2rem;
+        }
+
+        .legal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .legal-item {
+            padding: 1.5rem;
+            border-left: 3px solid var(--gold-primary);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .legal-label {
+            color: var(--gold-primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Why ZEDKAI Section */
+        .why-section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .features-list li {
+            padding: 0.5rem;
+            margin-bottom: 0.5rem; 
+            background: var(--charcoal-light);
+            border-left: 4px solid var(--gold-primary);
+            font-size: 1.1rem;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            color: var(--gold-primary);
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.3rem;
+        }
+
+        footer {
+            padding: 2rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            background: var(--charcoal-light);
+        }
+
+        .footer-name {
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-text {
+            color: var(--grey);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        @keyframes fadeInScale { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        @media (max-width: 768px) {
+            .hero-icons-row { gap: 1.2rem; }
+            .hero-icon-i { width: 28px; height: 28px; }
+            .lang-selector { top: 1rem; right: 1rem; }
+        }
+
+        .animate-on-scroll { opacity: 0; transition: all 0.8s ease; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- Selector de Idioma -->
+    <div class="lang-selector">
+        <button class="lang-btn " onclick="changeLang('es')">Español</button>
+        <button class="lang-btn active" onclick="changeLang('en')">English</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="logo-mark">ZEDKAI</h1>
+
+        <div class="hero-icons-row">
+            <div class="hero-icon-wrapper">
+                <i data-lucide="globe" class="hero-icon-i"></i>
+                <span class="hero-icon-tooltip" data-i18n="tooltip-1">Presencia Global</span>
+            </div>
+            <div class="hero-icon-wrapper">
+                <i data-lucide="store" class="hero-icon-i"></i>
+                <span class="hero-icon-tooltip" data-i18n="tooltip-2">Marketplaces Online</span>
+            </div>
+            <div class="hero-icon-wrapper">
+                <i data-lucide="brain-circuit" class="hero-icon-i"></i>
+                <span class="hero-icon-tooltip" data-i18n="tooltip-3">Sectores Tecnológicos</span>
+            </div>
+            <div class="hero-icon-wrapper">
+                <i data-lucide="bot" class="hero-icon-i"></i>
+                <span class="hero-icon-tooltip" data-i18n="tooltip-4">IA SaaS</span>
+            </div>
+            <div class="hero-icon-wrapper">
+                <i data-lucide="trending-up" class="hero-icon-i"></i>
+                <span class="hero-icon-tooltip" data-i18n="tooltip-5">Inversión Estratégica</span>
+            </div>
+            <div class="hero-icon-wrapper">
+                <i data-lucide="coins" class="hero-icon-i"></i>
+                <span class="hero-icon-tooltip" data-i18n="tooltip-6">Marca Premium</span>
+            </div>
+            <div class="hero-icon-wrapper">
+                <i data-lucide="scale" class="hero-icon-i"></i>
+                <span class="hero-icon-tooltip" data-i18n="tooltip-7">Protección Legal Incluida</span>
+            </div>
+        </div>
+
+        <p class="tagline prop-card" data-i18n="hero-tagline">Activo de Marca IA Premium <b style='color:#f2401af5; font-size: 1.6rem; font-weight: 550;'>en venta</b></p>
+        <div class="hero-description">
+            <p data-i18n="hero-desc"><strong>Una solución de marca llave en mano para empresas tecnológicas visionarias.</strong> Adquiera no solo un dominio, sino una marca legalmente registrada, lista para la expansión global en sectores en auge como IA, SaaS o mercados online.</p>
+        </div>
+        <!-- <a href="#contact" class="cta-button" data-i18n="cta-buy">Adquirir este activo</a> -->
+        <a href="https://sedo.com/us/" class="cta-button" data-i18n="cta-buy" target="_blank" rel="noopener noreferrer">Adquirir este activo</a>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item animate-on-scroll">
+                <span class="stat-number">6</span>
+                <p class="stat-label" data-i18n="stat-letters">Letras</p>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <span class="stat-number">2</span>
+                <p class="stat-label" data-i18n="stat-domains">Dominios Premium</p>
+            </div>
+            <div class="stat-item animate-on-scroll">
+                <span class="stat-number">27</span>
+                <p class="stat-label" data-i18n="stat-countries">Países Protegidos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Propositions -->
+    <section class="value-props">
+        <h2 class="section-title" data-i18n="props-title">Por qué ZEDKAI destaca</h2>
+        <div class="props-grid">
+            <div class="prop-card animate-on-scroll">
+                <h3 class="prop-title"><i data-lucide="target" class="prop-icon"></i> <span data-i18n="p1-t">ADN de Marca Perfecto</span></h3>
+                <p class="prop-text" data-i18n="p1-d"><strong>Seis letras. Inolvidable.</strong> ZEDKAI es corto, fonéticamente elegante e instantáneamente memorable. La terminación "AI" lo posiciona perfectamente para empresas de inteligencia artificial.</p>
+            </div>
+
+            <div class="prop-card animate-on-scroll">
+                <h3 class="prop-title"> <i data-lucide="shield-check" class="prop-icon"></i> <span data-i18n="p2-t">Protección Legal Incluida</span></h3>
+                <p class="prop-text" data-i18n="p2-d"><strong>Registro de Marca UE #019246272.</strong> Cubre los 27 estados miembros en las Clases 35 y 42. Ahorre meses de incertidumbre legal y miles en gastos de gestión.</p>
+            </div>
+
+            <div class="prop-card animate-on-scroll">
+                <h3 class="prop-title"><i data-lucide="globe" class="prop-icon"></i> <span data-i18n="p3-t">Listo para Mercado Global</span></h3>
+                <p class="prop-text" data-i18n="p3-d"><strong>Lingüísticamente neutro en todos los continentes.</strong> Pronunciación sencilla en mercados anglosajones, europeos y asiáticos. Escale sin barreras culturales.</p>
+            </div>
+
+            <div class="prop-card animate-on-scroll">
+                <h3 class="prop-title"><i data-lucide="rocket" class="prop-icon"></i> <span data-i18n="p4-t">Entrada Inmediata al Mercado</span></h3>
+                <p class="prop-text" data-i18n="p4-d"><strong>Lance más rápido que la competencia.</strong> Sin retrasos de branding ni conflictos de marcas. Entre en el mercado europeo con total cumplimiento legal desde el primer día.</p>
+            </div>
+
+            <div class="prop-card animate-on-scroll">
+                <h3 class="prop-title"><i data-lucide="gem" class="prop-icon"></i> <span data-i18n="p5-t">Dominio .COM Premium</span></h3>
+                <p class="prop-text" data-i18n="p5-d"><strong>El estándar de oro del sector digital.</strong> Un dominio .com de 6 letras en el espacio IA es cada vez más raro y valioso. Sea dueño de su identidad digital definitiva.</p>
+            </div>
+
+            <div class="prop-card animate-on-scroll">
+                <h3 class="prop-title"> <i data-lucide="trending-up" class="prop-icon"></i> <span data-i18n="p6-t">Inversión Estratégica</span></h3>
+                <p class="prop-text" data-i18n="p6-d"><strong>Potencial de revalorización en un sector en auge.</strong> A medida que la IA se acelera, los activos de marca alineados ganan valor exponencialmente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete Package -->
+    <section class="assets-section">
+        <div class="assets-container">
+            <h2 class="section-title" data-i18n="package-title">Paquete Completo de Activos</h2>
+            <div class="asset-list">
+                <div class="asset-item animate-on-scroll">
+                    <i data-lucide="globe-2" class="asset-icon"></i>
+                    <h3 class="asset-name">ZEDKAI.com</h3>
+                    <p class="asset-detail" data-i18n="asset-1-d">Dominio .COM Premium</p>
+                </div>
+                <div class="asset-item animate-on-scroll">
+                    <i data-lucide="flag" class="asset-icon"></i>
+                    <h3 class="asset-name">ZEDKAI.es</h3>
+                    <p class="asset-detail" data-i18n="asset-2-d">Autoridad regional europea</p>
+                </div>
+                <div class="asset-item animate-on-scroll">
+                    <i data-lucide="file-badge" class="asset-icon"></i>
+                    <h3 class="asset-name" data-i18n="asset-3-t">Marca registrada UE</h3>
+                    <p class="asset-detail" data-i18n="asset-3-d">Certificado EUIPO #019246272</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Details -->
+    <section class="legal-section">
+        <h2 class="section-title" data-i18n="legal-title">Detalles de Protección de Marca</h2>
+        <div class="legal-highlight animate-on-scroll">
+            <div class="legal-grid">
+                <div class="legal-item">
+                    <div class="legal-label" data-i18n="l-1">Número de Registro</div>
+                    <div class="legal-value">019246272</div>
+                </div>
+                <div class="legal-item">
+                    <div class="legal-label" data-i18n="l-2">Jurisdicción</div>
+                    <div class="legal-value" data-i18n="l-2-v">Unión Europea (27 Estados)</div>
+                </div>
+                <div class="legal-item">
+                    <div class="legal-label">Class 42</div>
+                    <div class="legal-value" data-i18n="l-3-v">Desarrollo de Software, PaaS, SaaS, Tecnología IA</div>
+                </div>
+                <div class="legal-item">
+                    <div class="legal-label">Class 35</div>
+                    <div class="legal-value" data-i18n="l-4-v">Gestión de Negocios y Marketplaces Online</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why ZEDKAI -->
+    <section class="why-section">
+        <h2 class="section-title" data-i18n="perfect-title">Perfecto para proyectos de vanguardia</h2>
+        <ul class="features-list">
+            <li class="animate-on-scroll" data-i18n="f1">Plataformas de IA y empresas de Machine Learning</li>
+            <li class="animate-on-scroll" data-i18n="f2">Soluciones SaaS e Infraestructura Cloud</li>
+            <li class="animate-on-scroll" data-i18n="f3">Startups tecnológicas buscando expansión europea</li>
+            <li class="animate-on-scroll" data-i18n="f4">Marketing Digital y plataformas de E-commerce</li>
+            <li class="animate-on-scroll" data-i18n="f5">Software empresarial y Business Intelligence</li>
+            <li class="animate-on-scroll" data-i18n="f6">Laboratorios de innovación e instituciones de investigación</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-name">Iván Peralta Zh.</p>
+        <p class="footer-text">®ZEDKAI. <span data-i18n="footer-tm">Marca Registrada</span> 2026</p>
+    </footer>
+
+    <script>
+        // Traducciones
+        const translations = {
+            es: {
+                "tooltip-1": "Presencia Global",
+                "tooltip-2": "Marketplaces Online",
+                "tooltip-3": "Sectores Tecnológicos",
+                "tooltip-4": "IA SaaS",
+                "tooltip-5": "Inversión Estratégica",
+                "tooltip-6": "Marca Premium",
+                "tooltip-7": "Protección Legal Incluida",
+                "hero-tagline": "<b>ZEDKAI</b> - Marca + Dominio - <b style='color:#f2401af5; font-size: 1.6rem; font-weight: 550;' >en venta</b>",
+                "hero-desc": "<strong>Una solución de marca llave en mano para empresas tecnológicas visionarias.</strong> Adquiera no solo un dominio, sino una marca legalmente registrada, lista para la expansión global en sectores en auge como IA, SaaS o mercados online.",
+                "cta-buy": "Adquirir este activo",
+                "stat-letters": "Letras",
+                "stat-domains": "Dominios Premium",
+                "stat-countries": "Países Protegidos",
+                "props-title": "Por qué ZEDKAI destaca",
+                "p1-t": "ADN de Marca Perfecto",
+                "p1-d": "<strong>Seis letras. Inolvidable.</strong> ZEDKAI es corto, fonéticamente elegante e instantáneamente memorable. La terminación \"AI\" lo posiciona perfectamente para empresas de IA.",
+                "p2-t": "Protección Legal Incluida",
+                "p2-d": "<strong>Registro de Marca UE #019246272.</strong> Cubre los 27 estados miembros en las Clases 35 y 42. Ahorre meses de incertidumbre legal.",
+                "p3-t": "Listo para Mercado Global",
+                "p3-d": "<strong>Lingüísticamente neutro en todos los continentes.</strong> Pronunciación sencilla en mercados anglosajones, europeos y asiáticos.",
+                "p4-t": "Entrada Inmediata al Mercado",
+                "p4-d": "<strong>Lance más rápido que la competencia.</strong> Sin retrasos de branding ni conflictos de marcas. Cumplimiento legal desde el primer día.",
+                "p5-t": "Dominio .COM Premium",
+                "p5-d": "<strong>El estándar de oro digital.</strong> Un dominio .com de 6 letras en el espacio IA es raro y valioso. Sea dueño de su identidad definitiva.",
+                "p6-t": "Inversión Estratégica",
+                "p6-d": "<strong>Potencial de revalorización en un sector en auge.</strong> A medida que la IA se acelera, los activos de marca alineados ganan valor.",
+                "package-title": "Paquete Completo de Activos",
+                "asset-1-d": "Dominio .COM Premium",
+                "asset-2-d": "Autoridad regional europea",
+                "asset-3-t": "Marca Registrada UE",
+                "asset-3-d": "Certificado EUIPO #019246272",
+                "legal-title": "Detalles de Protección de Marca",
+                "l-1": "Número de Registro",
+                "l-2": "Jurisdicción",
+                "l-2-v": "Unión Europea (27 Estados)",
+                "l-3-v": "Desarrollo de Software, PaaS, SaaS, Tecnología IA",
+                "l-4-v": "Gestión de Negocios y Marketplaces Online",
+                "perfect-title": "Perfecto para proyectos de vanguardia",
+                "f1": "Plataformas de IA y empresas de Machine Learning",
+                "f2": "Soluciones SaaS e Infraestructura Cloud",
+                "f3": "Startups tecnológicas buscando expansión europea",
+                "f4": "Marketing Digital y plataformas de E-commerce",
+                "f5": "Software empresarial y Business Intelligence",
+                "f6": "Laboratorios de innovación e investigación",
+                "footer-tm": "Marca Registrada"
+            },
+            en: {
+                "tooltip-1": "Global Presence",
+                "tooltip-2": "Online Marketplaces",
+                "tooltip-3": "Technological Sectors",
+                "tooltip-4": "IA SaaS",
+                "tooltip-5": "Strategic Investment",
+                "tooltip-6": "Premium Brand Asset",
+                "tooltip-7": "Legal Protection Included",
+                "hero-tagline": "<b>ZEDKAI</b> - Trademark + Domain - <b style='color:#f2401af5; font-size: 1.6rem; font-weight: 550;' >for Sale</b>",
+                "hero-desc": "<strong>A turnkey brand solution for visionary technology companies.</strong> Acquire not just a domain, but a legally registered trademark, ready for global expansion in booming sectors like AI, SaaS, or online marketplaces.",
+                "cta-buy": "Acquire this asset",
+                "stat-letters": "Letters",
+                "stat-domains": "Premium Domains",
+                "stat-countries": "Protected Countries",
+                "props-title": "Why ZEDKAI Stands Apart",
+                "p1-t": "Perfect Brand DNA",
+                "p1-d": "<strong>Six letters. Unforgettable.</strong> ZEDKAI is short, phonetically elegant, and instantly memorable. The \"AI\" ending positions it perfectly for AI ventures.",
+                "p2-t": "Legal Protection Included",
+                "p2-d": "<strong>EU Trademark Registration #019246272.</strong> Covering all 27 EU member states in Classes 35 & 42. Skip months of legal uncertainty.",
+                "p3-t": "Global Market Ready",
+                "p3-d": "<strong>Linguistically neutral across continents.</strong> Effortless pronunciation in English, European, and Asian markets. Scale globally.",
+                "p4-t": "Immediate Market Entry",
+                "p4-d": "<strong>Launch faster than competitors.</strong> No branding delays, no trademark conflicts. Enter the European market with legal compliance.",
+                "p5-t": "Premium .COM Domain",
+                "p5-d": "<strong>The gold standard of digital real estate.</strong> A 6-letter .com domain in the AI space is rare and valuable. Own your namespace.",
+                "p6-t": "Strategic Investment",
+                "p6-d": "<strong>Appreciation potential in a booming sector.</strong> As AI adoption accelerates, premium AI-aligned brand assets gain value.",
+                "package-title": "Complete Asset Package",
+                "asset-1-d": "Premium .COM domain",
+                "asset-2-d": "European regional authority",
+                "asset-3-t": "EU Trademark",
+                "asset-3-d": "EUIPO Certificate #019246272",
+                "legal-title": "Trademark Protection Details",
+                "l-1": "Registration Number",
+                "l-2": "Jurisdiction",
+                "l-2-v": "European Union (27 States)",
+                "l-3-v": "Software Development, PaaS, SaaS, AI Technology",
+                "l-4-v": "Business Management & Online Marketplaces",
+                "perfect-title": "Perfect For Forward-Thinking Ventures",
+                "f1": "AI Platforms & Machine Learning Companies",
+                "f2": "SaaS Solutions & Cloud Infrastructure",
+                "f3": "Technology Startups Seeking European Expansion",
+                "f4": "Digital Marketing & E-commerce Platforms",
+                "f5": "Enterprise Software & Business Intelligence",
+                "f6": "Innovation Labs & Research Institutions",
+                "footer-tm": "Registered Trademark"
+            }
+        };
+
+        function changeLang(lang) {
+            // Actualizar botones
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.innerText.toLowerCase().includes(lang)) btn.classList.add('active');
+            });
+
+            // Actualizar textos
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Actualizar HTML lang attribute
+            document.documentElement.lang = lang;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => changeLang('en'));
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
